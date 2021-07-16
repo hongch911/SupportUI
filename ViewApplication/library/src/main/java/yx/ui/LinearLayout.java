@@ -86,15 +86,17 @@ public class LinearLayout extends android.widget.LinearLayout {
                 }
             }
         }
-        this.ratio = dimensionRatioValue;
+        setRatio(dimensionRatioValue);
     }
 
     public void setRatio(float ratio) {
         this.ratio = ratio;
+        requestLayout();
     }
 
     public void setAdjustViewBounds(boolean adjustViewBounds) {
         this.mAdjustViewBounds = adjustViewBounds;
+        requestLayout();
     }
 
     @Override

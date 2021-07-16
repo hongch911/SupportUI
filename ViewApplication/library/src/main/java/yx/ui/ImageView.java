@@ -86,16 +86,17 @@ public class ImageView extends android.widget.ImageView {
                 }
             }
         }
-        this.ratio = dimensionRatioValue;
+        setRatio(dimensionRatioValue);
     }
 
     public void setRatio(float ratio) {
         this.ratio = ratio;
-        //requestLayout();
+        requestLayout();
     }
 
     public void setAdjustViewBounds(boolean adjustViewBounds) {
         this.mAdjustViewBounds = adjustViewBounds;
+        requestLayout();
     }
 
     @Override
